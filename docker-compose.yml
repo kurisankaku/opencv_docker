@@ -1,0 +1,11 @@
+version: '3'
+services:
+  opencv:
+    tty: true
+    build:
+      context: .
+      dockerfile: ./docker/opencv/Dockerfile
+    environment:
+      - DISPLAY=host.docker.internal:0.0
+    volumes:
+      - .:/sampleproject
